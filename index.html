@@ -1,0 +1,1930 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Ágape - Pintura Eletrostática</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/landing-page.css" rel="stylesheet"/>
+    <!--     Fonts and icons     -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/fa-5.15.3.css" rel="stylesheet"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_WxdzqpRVfgS65UOXKOya0');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_uk7e5a7', 'template_hju5tw5', this)
+                    .then(function () {
+                        Swal.fire(
+                            'E-mail enviado!',
+                            'Entraremos em contato o mais breve possível',
+                            'success'
+                        )
+                        resetForm();
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body class="landing-page landing-page1">
+<nav class="navbar navbar-transparent navbar-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar bar1"></span>
+                <span class="icon-bar bar2"></span>
+                <span class="icon-bar bar3"></span>
+            </button>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="assets/img/template/logo-small.png" alt="Creative Tim Logo">
+                </div>
+                <div class="brand">
+                    <a href="tel:04333295197">
+                        (43) 3329-5197
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="example">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#myModal">
+                        <i class="fas fa-palette"></i>
+                        Cores RAL
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<div class="wrapper">
+    <div class="parallax filter-gradient blue" data-color="blue">
+        <div class="parallax-background">
+            <img class="parallax-background-image" src="assets/img/template/bg3.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 hidden-xs">
+                    <div class="parallax-image">
+                        <img class="phone" src="assets/img/template/logo-big.png" style="margin-top: 60px" alt=""/>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-1">
+                    <div class="description">
+                        <h2><b>Ágape Londrina</b></h2>
+                        <h2><b>Pinturas Eletrostáticas</b></h2>
+                        <h5>Trabalhamos com a melhor opção de pintura
+                            para aderência em peças metálicas,
+                            material galvanizado, tubulares,
+                            painéis elétricos e muito outros.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-gray section-clients">
+        <div class="container text-center">
+            <h4 class="header-text">Prática Sustentável</h4>
+            <p>
+                A Ágape Londrina conta um excelente tratamento de efluentes,
+                estabelecendo objetivos e metas ambientais, assegurando o menor impacto
+                de seus processos produtivos, atuando de forma preventiva e eficiente na
+                utilização dos recursos, e reciclagem e destino adequado aos resíduos,
+                atendendo todas as normas e legislações, contribuindo assim para um futuro
+                melhor para todos.<br>
+            </p>
+            <div class="logos">
+                <ul class="list-unstyled">
+                    <li><img src="assets/img/brands/brand_1.png" alt=""/></li>
+                    <li><img src="assets/img/brands/brand_2.png" alt=""/></li>
+                    <li><img src="assets/img/brands/brand_3.png" alt=""/></li>
+                    <li><img src="assets/img/brands/brand_4.png" alt=""/></li>
+                    <li><img src="assets/img/brands/brand_5.png" alt=""/></li>
+                    <li><img src="assets/img/brands/brand_6.png" alt=""/></li>
+                    <li><img src="assets/img/brands/brand_7.png" alt=""/></li>
+                    <li><img src="assets/img/brands/brand_8.png" alt=""/></li>
+                    <li><img src="assets/img/brands/brand_9.png" alt=""/></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section section-demo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="description-carousel" class="carousel fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item">
+                                <img src="assets/img/template/carousel/home_11.jpg" alt="">
+                            </div>
+                            <div class="item active">
+                                <img src="assets/img/template/carousel/home_22.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/template/carousel/home_33.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/template/carousel/home_44.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/template/carousel/home_55.jpg" alt="">
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators carousel-indicators-blue">
+                            <li data-target="#description-carousel" data-slide-to="0" class=""></li>
+                            <li data-target="#description-carousel" data-slide-to="1" class="active"></li>
+                            <li data-target="#description-carousel" data-slide-to="2" class=""></li>
+                            <li data-target="#description-carousel" data-slide-to="3" class=""></li>
+                            <li data-target="#description-carousel" data-slide-to="4" class=""></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1 servicos">
+                    <h4 class="header-text">Serviços</h4>
+                    <p class="text-center">
+                        Uma das formas de pintura mais resistentes e efetivas. Garantindo flexibilidade
+                        da peça sem danificar a pintura, ele passa por um processo de descargas elétricas,
+                        as quais são aplicadas de forma oposta a composição da peça,
+                        fazendo assim com que o pó fixe no produto.
+                    </p>
+                    <a href="#contact"
+                       style="margin-top: 50px !important;"
+                       class="btn btn-fill btn-info center-block" data-button="info">Faça um Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-features">
+        <div class="container">
+            <h4 class="header-text text-center">Nossos Produtos</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-blue">
+                        <div class="icon">
+                            <i class="fas fa-fill-drip"></i>
+                        </div>
+                        <div class="text">
+                            <h4>Pintura Epóxi</h4>
+                            <p>Indicada para locais com grande tráfego e
+                                sujeitos a ataques químicos pois oferece
+                                alta resistência. Excelente acabamento, superfície lisa, resistente e impermeável.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-blue">
+                        <div class="icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h4>Híbrida (Epóxi-poliéster)</h4>
+                        <p>Possuem excelentes propriedades mecânicas e ótima resistência química.
+                            A alternativa ideal para espaços internos e equipamentos que não estão sujeitos
+                            ao sol.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-blue">
+                        <div class="icon">
+                            <i class="fas fa-paint-roller"></i>
+                        </div>
+                        <h4>Pintura Poliéster</h4>
+                        <p>Possui alto poder de cobertura, secagem rápida e ótima resistência sob a ação da luz solar,
+                            onde a calcinação e o amarelamento são praticamente desprezíveis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-presentation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="description">
+                        <h4 class="header-text">Pintura Eletrostática a Pó</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Características</th>
+                                    <th scope="col"><b>EPÓXI</b></th>
+                                    <th scope="col"><b>HÍBRIDO</b></th>
+                                    <th scope="col"><b>POLIÉSTER</b></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">Proteção anticorrosiva</th>
+                                    <td class="ball-sign">•••••</td>
+                                    <td class="ball-sign">•••••</td>
+                                    <td class="ball-sign">•••</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Resistência Mecânica</th>
+                                    <td class="ball-sign">•••••</td>
+                                    <td class="ball-sign">••••</td>
+                                    <td class="ball-sign">••••</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Resistência Amarelamento</th>
+                                    <td class="nr-sign">NR</td>
+                                    <td class="ball-sign">••</td>
+                                    <td class="ball-sign">•••••</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Exposição Externa</th>
+                                    <td class="nr-sign">NR</td>
+                                    <td class="nr-sign">NR</td>
+                                    <td class="ball-sign">•••••</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Resistência Química</th>
+                                    <td class="ball-sign">•••••</td>
+                                    <td class="ball-sign">•••</td>
+                                    <td class="ball-sign">••</td>
+                                </tr>
+                                </tbody>
+                                <caption style="caption-side:bottom; margin-top: -20px">
+                                    <p class="caption">
+                                        * (•••••) Excelente, (••••) Boa, (•••) Razoável, (••) Ruim, (NR) Não
+                                        Recomendado.
+                                    </p>
+                                </caption>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1 hidden-xs">
+                    <div class="description">
+                        <h4 class="header-text">Campo de Aplicação</h4>
+                        <div class="table-responsive tableFixHead">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Segmento de Mercado</th>
+                                    <th scope="col"><b>EPÓXI</b></th>
+                                    <th scope="col"><b>HÍBRIDO</b></th>
+                                    <th scope="col"><b>POLIÉSTER</b></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">Refrigeradores</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Fogões</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Microondas</th>
+                                    <td class="x-sign">✘</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Condicionadores de Ar</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Aquecedores</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Caixas Elétricas</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Transformadores</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Luminárias</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Armários de Aço</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Móveis de Jardim</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Arquivos de Aço</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Estantes Metálicas</th>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Móveis de Escritório</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Autopeças</th>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extintores de Incêndio</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Perfis para Construção Civil</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Equipamentos Hospitalares</th>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Ferramentas</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Bicicletas</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Equipamentos Agrícolas</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Gabinetes em Geral</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Telhas de Cerâmica</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Vidros e Garrafas</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tubulações Industriais</th>
+                                    <td class="x-sign">✘</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Telhas Metálicas</th>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Brinquedos</th>
+                                    <td></td>
+                                    <td class="x-sign">✘</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Rodas Automotivas</th>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                    <td class="x-sign">✘</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-gray section-testimonial">
+        <div class="container">
+            <h4 class="header-text text-center">Vantagens</h4>
+            <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-001.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Resistência</p>
+                            <h3>"A pintura a pó oferece mais resistência a impactos!"</h3>
+                        </div>
+                    </div>
+                    <div class="item active">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-002.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Uniforme</p>
+                            <h3>"A pintura a pó proporciona cobertura uniforme da peças!"</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-003.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Alto Alcance</p>
+                            <h3>"A pintura a pó permite alcance de tinta em cavidades de difícil acesso."</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-004.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Aderência</p>
+                            <h3>"A pintura a pó oferece ótima aderência."</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-005.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Intemperismo</p>
+                            <h3>"A pintura a pó proporciona mais resistência a altas temperaturas!"</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-006.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Anti-Corrosivo</p>
+                            <h3>"A pintura a pó oferece mais resistência à corrosão."</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-007.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Não-Fotossensível</p>
+                            <h3>"A pintura a pó oferece mais resistência a raios UV."</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-008.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Flexível</p>
+                            <h3>"A pintura a pó tem excelente flexibilidade!"</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-009.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Energia Limpa</p>
+                            <h3>"A pintura a pó emite 0 ou quase 0 de compostos orgânicos voláteis (COV)."</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="mask">
+                            <img src="assets/img/vantagens/pintura-eletrostatica-vantagens-010.jpg" alt="">
+                        </div>
+                        <div class="carousel-testimonial-caption">
+                            <p>Customização</p>
+                            <h3>"A pintura a pó permite a maior gama de efeitos especiais, impossíveis de obter com
+                                pintura líquida."</h3>
+                        </div>
+                    </div>
+                </div>
+                <ol class="carousel-indicators carousel-indicators-blue">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="section section-no-padding" id="contact">
+        <div class="parallax filter-gradient blue" data-color="blue">
+            <div class="parallax-background">
+                <img class="parallax-background-image" src="assets/img/template/bg3.jpg" alt=""/>
+            </div>
+            <div class="info">
+                <h1>Fale Conosco</h1>
+                <p>Nossos atendentes entrarão em contato o mais breve possível!</p>
+                <form class="form-horizontal" id="contact-form">
+                    <input type="hidden" name="contact_number">
+                    <div class="form-group">
+                        <input id="name" name="name" type="text" required="required" class="form-control"
+                               placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                        <input id="email" name="email" type="email" required="required" class="form-control"
+                               placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                        <input id="phone" name="phone" type="text" required="required" class="form-control"
+                               placeholder="Tel."
+                               onkeypress="mask(this, mphone);" onblur="mask(this, mphone);">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" cols="40" rows="5" required="required"
+                                  class="form-control" placeholder="Mensagem"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button name="submit" type="submit" class="btn btn-neutral btn-lg btn-fill"
+                                style="margin-top: 30px !important;">Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Ágape Pintura, Rua Antônio Piovesan, 295 - Jd. Alpes, Londrina/PR - CEP: 86075-142. Fone: (43)
+                3329-5197
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Paleta de Cores RAL</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="w3-table-all">
+                        <tbody>
+                        <tr>
+                            <th style="width: 100px">Número</th>
+                            <th style="width: 100px">Código</th>
+                            <th>Cor</th>
+                            <th style="width: 250px">Nome</th>
+                        </tr>
+                        <tr>
+                            <td>RAL 1000</td>
+                            <td>#CCC58F</td>
+                            <td style="background:#CCC58F"></td>
+                            <td>Bege esverdeado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1001</td>
+                            <td>#D1BC8A</td>
+                            <td style="background:#D1BC8A"></td>
+                            <td>Bege</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1002</td>
+                            <td>#D2B773</td>
+                            <td style="background:#D2B773"></td>
+                            <td>Amarelo areia</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1003</td>
+                            <td>#F7BA0B</td>
+                            <td style="background:#F7BA0B"></td>
+                            <td>Amarelo segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1004</td>
+                            <td>#E2B007</td>
+                            <td style="background:#E2B007"></td>
+                            <td>Amarelo ouro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1005</td>
+                            <td>#C89F04</td>
+                            <td style="background:#C89F04"></td>
+                            <td>Amarelo mel</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1006</td>
+                            <td>#E1A100</td>
+                            <td style="background:#E1A100"></td>
+                            <td>Amarelo milho</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1007</td>
+                            <td>#E79C00</td>
+                            <td style="background:#E79C00"></td>
+                            <td>Amarelo narciso</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1011</td>
+                            <td>#AF8A54</td>
+                            <td style="background:#AF8A54"></td>
+                            <td>Castanho</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1012</td>
+                            <td>#D9C022</td>
+                            <td style="background:#D9C022"></td>
+                            <td>Amarelo limão</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1013</td>
+                            <td>#E9E5CE</td>
+                            <td style="background:#E9E5CE"></td>
+                            <td>Pérola</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1014</td>
+                            <td>#DFCEA1</td>
+                            <td style="background:#DFCEA1"></td>
+                            <td>Marfim</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1015</td>
+                            <td>#EADEBD</td>
+                            <td style="background:#EADEBD"></td>
+                            <td>Marfim claro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1016</td>
+                            <td>#EAF044</td>
+                            <td style="background:#EAF044"></td>
+                            <td>Amarelo enxofre</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1017</td>
+                            <td>#F4B752</td>
+                            <td style="background:#F4B752"></td>
+                            <td>Amarelo açafrão</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1018</td>
+                            <td>#F3E03B</td>
+                            <td style="background:#F3E03B"></td>
+                            <td>Amarelo zinco</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1019</td>
+                            <td>#A4957D</td>
+                            <td style="background:#A4957D"></td>
+                            <td>Bege acizentado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1020</td>
+                            <td>#9A9464</td>
+                            <td style="background:#9A9464"></td>
+                            <td>Amarelo oliva</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1021</td>
+                            <td>#EEC900</td>
+                            <td style="background:#EEC900"></td>
+                            <td>Amarelo canola</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1023</td>
+                            <td>#F0CA00</td>
+                            <td style="background:#F0CA00"></td>
+                            <td>Amarelo sinalização</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1024</td>
+                            <td>#B89C50</td>
+                            <td style="background:#B89C50"></td>
+                            <td>Ocre</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1026</td>
+                            <td>#F5FF00</td>
+                            <td style="background:#F5FF00"></td>
+                            <td>Amarelo luminoso</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1027</td>
+                            <td>#A38C15</td>
+                            <td style="background:#A38C15"></td>
+                            <td>Amarelo curry</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1028</td>
+                            <td>#FFAB00</td>
+                            <td style="background:#FFAB00"></td>
+                            <td>Amarelo melão</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1032</td>
+                            <td>#DDB20F</td>
+                            <td style="background:#DDB20F"></td>
+                            <td>Amarelo vassoura</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1033</td>
+                            <td>#FAAB21</td>
+                            <td style="background:#FAAB21"></td>
+                            <td>Amarelo dália</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1034</td>
+                            <td>#EDAB56</td>
+                            <td style="background:#EDAB56"></td>
+                            <td>Amarelo pastel</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1035</td>
+                            <td>#A29985</td>
+                            <td style="background:#A29985"></td>
+                            <td>Bege metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1036</td>
+                            <td>#927549</td>
+                            <td style="background:#927549"></td>
+                            <td>Dourado metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 1037</td>
+                            <td>#EEA205</td>
+                            <td style="background:#EEA205"></td>
+                            <td>Amarelo solar</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2000</td>
+                            <td>#DD7907</td>
+                            <td style="background:#DD7907"></td>
+                            <td>Laranja escuro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2001</td>
+                            <td>#BE4E20</td>
+                            <td style="background:#BE4E20"></td>
+                            <td>Laranja avermelhado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2002</td>
+                            <td>#C63927</td>
+                            <td style="background:#C63927"></td>
+                            <td>Laranja sangue</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2003</td>
+                            <td>#FA842B</td>
+                            <td style="background:#FA842B"></td>
+                            <td>Laranja pastel</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2004</td>
+                            <td>#E75B12</td>
+                            <td style="background:#E75B12"></td>
+                            <td>Laranja puro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2005</td>
+                            <td>#FF2300</td>
+                            <td style="background:#FF2300"></td>
+                            <td>Laranja puro luminoso</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2007</td>
+                            <td>#FFA421</td>
+                            <td style="background:#FFA421"></td>
+                            <td>Laranja claro luminoso</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2008</td>
+                            <td>#F3752C</td>
+                            <td style="background:#F3752C"></td>
+                            <td>Laranja</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2009</td>
+                            <td>#E15501</td>
+                            <td style="background:#E15501"></td>
+                            <td>Laranja sinalização</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2010</td>
+                            <td>#D4652F</td>
+                            <td style="background:#D4652F"></td>
+                            <td>Laranja segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2011</td>
+                            <td>#EC7C25</td>
+                            <td style="background:#EC7C25"></td>
+                            <td>Laranja intenso</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2012</td>
+                            <td>#DB6A50</td>
+                            <td style="background:#DB6A50"></td>
+                            <td>Laranja salmão</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 2013</td>
+                            <td>#954527</td>
+                            <td style="background:#954527"></td>
+                            <td>Laranja metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3000</td>
+                            <td>#AB2524</td>
+                            <td style="background:#AB2524"></td>
+                            <td>Vermelho vivo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3001</td>
+                            <td>#A02128</td>
+                            <td style="background:#A02128"></td>
+                            <td>Vermelho segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3002</td>
+                            <td>#A1232B</td>
+                            <td style="background:#A1232B"></td>
+                            <td>Carmim</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3003</td>
+                            <td>#8D1D2C</td>
+                            <td style="background:#8D1D2C"></td>
+                            <td>Vermelho rubi</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3004</td>
+                            <td>#701F29</td>
+                            <td style="background:#701F29"></td>
+                            <td>Vermelho púrpura</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3005</td>
+                            <td>#5E2028</td>
+                            <td style="background:#5E2028"></td>
+                            <td>Vermelho vinho</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3007</td>
+                            <td>#402225</td>
+                            <td style="background:#402225"></td>
+                            <td>Vermelho escuro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3009</td>
+                            <td>#703731</td>
+                            <td style="background:#703731"></td>
+                            <td>Vermelho ferrugem</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3011</td>
+                            <td>#7E292C</td>
+                            <td style="background:#7E292C"></td>
+                            <td>Vermelho pardo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3012</td>
+                            <td>#CB8D73</td>
+                            <td style="background:#CB8D73"></td>
+                            <td>Bege avermelhado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3013</td>
+                            <td>#9C322E</td>
+                            <td style="background:#9C322E"></td>
+                            <td>Vermelho tomate</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3014</td>
+                            <td>#D47479</td>
+                            <td style="background:#D47479"></td>
+                            <td>Rosa envelhecido</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3015</td>
+                            <td>#E1A6AD</td>
+                            <td style="background:#E1A6AD"></td>
+                            <td>Rosa claro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3016</td>
+                            <td>#AC4034</td>
+                            <td style="background:#AC4034"></td>
+                            <td>Coral</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3017</td>
+                            <td>#D3545F</td>
+                            <td style="background:#D3545F"></td>
+                            <td>Rosa</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3018</td>
+                            <td>#D14152</td>
+                            <td style="background:#D14152"></td>
+                            <td>Vermelho morango</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3020</td>
+                            <td>#C1121C</td>
+                            <td style="background:#C1121C"></td>
+                            <td>Vermelho sinalização</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3022</td>
+                            <td>#D56D56</td>
+                            <td style="background:#D56D56"></td>
+                            <td>Rosa salmão</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3024</td>
+                            <td>#F70000</td>
+                            <td style="background:#F70000"></td>
+                            <td>Vermelho luminoso</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3026</td>
+                            <td>#FF0000</td>
+                            <td style="background:#FF0000"></td>
+                            <td>Vermelho claro luminoso</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3027</td>
+                            <td>#B42041</td>
+                            <td style="background:#B42041"></td>
+                            <td>Vermelho framboesa</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3028</td>
+                            <td>#E72512</td>
+                            <td style="background:#E72512"></td>
+                            <td>Vermelho puro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3031</td>
+                            <td>#AC323B</td>
+                            <td style="background:#AC323B"></td>
+                            <td>Vermelho oriental</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3032</td>
+                            <td>#711521</td>
+                            <td style="background:#711521"></td>
+                            <td>Vermelho rubi metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 3033</td>
+                            <td>#B24C43</td>
+                            <td style="background:#B24C43"></td>
+                            <td>Rosa escuro metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4001</td>
+                            <td>#8A5A83</td>
+                            <td style="background:#8A5A83"></td>
+                            <td>Roxo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4002</td>
+                            <td>#933D50</td>
+                            <td style="background:#933D50"></td>
+                            <td>Violeta avermelhado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4003</td>
+                            <td>#D15B8F</td>
+                            <td style="background:#D15B8F"></td>
+                            <td>Violeta rosado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4004</td>
+                            <td>#691639</td>
+                            <td style="background:#691639"></td>
+                            <td>Bordô</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4005</td>
+                            <td>#83639D</td>
+                            <td style="background:#83639D"></td>
+                            <td>Lilás</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4006</td>
+                            <td>#992572</td>
+                            <td style="background:#992572"></td>
+                            <td>Roxo sinalização</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4007</td>
+                            <td>#4A203B</td>
+                            <td style="background:#4A203B"></td>
+                            <td>Roxo escuro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4008</td>
+                            <td>#904684</td>
+                            <td style="background:#904684"></td>
+                            <td>Roxo segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4009</td>
+                            <td>#A38995</td>
+                            <td style="background:#A38995"></td>
+                            <td>Roxo pastel</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4010</td>
+                            <td>#C63678</td>
+                            <td style="background:#C63678"></td>
+                            <td>Magenta</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4011</td>
+                            <td>#8773A1</td>
+                            <td style="background:#8773A1"></td>
+                            <td>Roxo metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 4012</td>
+                            <td>#6B6880</td>
+                            <td style="background:#6B6880"></td>
+                            <td>Framboesa metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5000</td>
+                            <td>#384C70</td>
+                            <td style="background:#384C70"></td>
+                            <td>Violeta azulado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5001</td>
+                            <td>#1F4764</td>
+                            <td style="background:#1F4764"></td>
+                            <td>Azul esverdeado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5002</td>
+                            <td>#2B2C7C</td>
+                            <td style="background:#2B2C7C"></td>
+                            <td>Azul marinho</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5003</td>
+                            <td>#2A3756</td>
+                            <td style="background:#2A3756"></td>
+                            <td>Azul safira</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5004</td>
+                            <td>#1D1F2A</td>
+                            <td style="background:#1D1F2A"></td>
+                            <td>Azul escuro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5005</td>
+                            <td>#154889</td>
+                            <td style="background:#154889"></td>
+                            <td>Azul segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5007</td>
+                            <td>#41678D</td>
+                            <td style="background:#41678D"></td>
+                            <td>Azul brilhante</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5008</td>
+                            <td>#313C48</td>
+                            <td style="background:#313C48"></td>
+                            <td>Azul acizentado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5009</td>
+                            <td>#2E5978</td>
+                            <td style="background:#2E5978"></td>
+                            <td>Azul</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5010</td>
+                            <td>#13447C</td>
+                            <td style="background:#13447C"></td>
+                            <td>Azul genciano</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5011</td>
+                            <td>#232C3F</td>
+                            <td style="background:#232C3F"></td>
+                            <td>Azul aço</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5012</td>
+                            <td>#3481B8</td>
+                            <td style="background:#3481B8"></td>
+                            <td>Azul claro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5013</td>
+                            <td>#232D53</td>
+                            <td style="background:#232D53"></td>
+                            <td>Azul cobalto</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5014</td>
+                            <td>#6C7C98</td>
+                            <td style="background:#6C7C98"></td>
+                            <td>Azul pombo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5015</td>
+                            <td>#2874B2</td>
+                            <td style="background:#2874B2"></td>
+                            <td>Azul celeste</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5017</td>
+                            <td>#0E518D</td>
+                            <td style="background:#0E518D"></td>
+                            <td>Azul sinalização</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5018</td>
+                            <td>#21888F</td>
+                            <td style="background:#21888F"></td>
+                            <td>Azul turquesa</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5019</td>
+                            <td>#1A5784</td>
+                            <td style="background:#1A5784"></td>
+                            <td>Azul capri</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5020</td>
+                            <td>#0B4151</td>
+                            <td style="background:#0B4151"></td>
+                            <td>Azul oceano</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5021</td>
+                            <td>#07737A</td>
+                            <td style="background:#07737A"></td>
+                            <td>Azul água</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5022</td>
+                            <td>#2F2A5A</td>
+                            <td style="background:#2F2A5A"></td>
+                            <td>Azul noturno</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5023</td>
+                            <td>#4D668E</td>
+                            <td style="background:#4D668E"></td>
+                            <td>Azul distante</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5024</td>
+                            <td>#6A93B0</td>
+                            <td style="background:#6A93B0"></td>
+                            <td>Azul pastel</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5025</td>
+                            <td>#296478</td>
+                            <td style="background:#296478"></td>
+                            <td>Azul metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 5026</td>
+                            <td>#102C54</td>
+                            <td style="background:#102C54"></td>
+                            <td>Azul noturno metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6000</td>
+                            <td>#327662</td>
+                            <td style="background:#327662"></td>
+                            <td>Verde platina</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6001</td>
+                            <td>#28713E</td>
+                            <td style="background:#28713E"></td>
+                            <td>Verde esmeralda</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6002</td>
+                            <td>#276235</td>
+                            <td style="background:#276235"></td>
+                            <td>Verde folha</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6003</td>
+                            <td>#4B573E</td>
+                            <td style="background:#4B573E"></td>
+                            <td>Verde oliva</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6004</td>
+                            <td>#0E4243</td>
+                            <td style="background:#0E4243"></td>
+                            <td>Verde azulado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6005</td>
+                            <td>#0F4336</td>
+                            <td style="background:#0F4336"></td>
+                            <td>Verde musgo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6006</td>
+                            <td>#40433B</td>
+                            <td style="background:#40433B"></td>
+                            <td>Verde acizentado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6007</td>
+                            <td>#283424</td>
+                            <td style="background:#283424"></td>
+                            <td>Verde garrafa</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6008</td>
+                            <td>#35382E</td>
+                            <td style="background:#35382E"></td>
+                            <td>Verde castanho</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6009</td>
+                            <td>#26392F</td>
+                            <td style="background:#26392F"></td>
+                            <td>Verde couve</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6010</td>
+                            <td>#3E753B</td>
+                            <td style="background:#3E753B"></td>
+                            <td>Verde grama</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6011</td>
+                            <td>#68825B</td>
+                            <td style="background:#68825B"></td>
+                            <td>Verde aspargo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6012</td>
+                            <td>#31403D</td>
+                            <td style="background:#31403D"></td>
+                            <td>Verde escuro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6013</td>
+                            <td>#797C5A</td>
+                            <td style="background:#797C5A"></td>
+                            <td>Verde palha</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6014</td>
+                            <td>#444337</td>
+                            <td style="background:#444337"></td>
+                            <td>Amarelo oliva</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6015</td>
+                            <td>#3D403A</td>
+                            <td style="background:#3D403A"></td>
+                            <td>Oliva escuro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6016</td>
+                            <td>#026A52</td>
+                            <td style="background:#026A52"></td>
+                            <td>Verde turquesa</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6017</td>
+                            <td>#468641</td>
+                            <td style="background:#468641"></td>
+                            <td>Verde seiva</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6018</td>
+                            <td>#48A43F</td>
+                            <td style="background:#48A43F"></td>
+                            <td>Verde amarelado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6019</td>
+                            <td>#B7D9B1</td>
+                            <td style="background:#B7D9B1"></td>
+                            <td>Verde pastel</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6020</td>
+                            <td>#354733</td>
+                            <td style="background:#354733"></td>
+                            <td>Verde cromo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6021</td>
+                            <td>#86A47C</td>
+                            <td style="background:#86A47C"></td>
+                            <td>Verde pálido</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6022</td>
+                            <td>#3E3C32</td>
+                            <td style="background:#3E3C32"></td>
+                            <td>Marrom oliva</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6024</td>
+                            <td>#008754</td>
+                            <td style="background:#008754"></td>
+                            <td>Verde sinalização</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6025</td>
+                            <td>#53753C</td>
+                            <td style="background:#53753C"></td>
+                            <td>Verde samambaia</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6026</td>
+                            <td>#005D52</td>
+                            <td style="background:#005D52"></td>
+                            <td>Verde opala</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6027</td>
+                            <td>#81C0BB</td>
+                            <td style="background:#81C0BB"></td>
+                            <td>Verde claro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6028</td>
+                            <td>#2D5546</td>
+                            <td style="background:#2D5546"></td>
+                            <td>Verde pinheiro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6029</td>
+                            <td>#007243</td>
+                            <td style="background:#007243"></td>
+                            <td>Verde menta</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6032</td>
+                            <td>#0F8558</td>
+                            <td style="background:#0F8558"></td>
+                            <td>Verde segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6033</td>
+                            <td>#478A84</td>
+                            <td style="background:#478A84"></td>
+                            <td>Turquesa claro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6034</td>
+                            <td>#7FB0B2</td>
+                            <td style="background:#7FB0B2"></td>
+                            <td>Turquesa pastel</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6035</td>
+                            <td>#1B542C</td>
+                            <td style="background:#1B542C"></td>
+                            <td>Verde metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6036</td>
+                            <td>#005D4C</td>
+                            <td style="background:#005D4C"></td>
+                            <td>Verde opala metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6037</td>
+                            <td>#25E712</td>
+                            <td style="background:#25E712"></td>
+                            <td>Verde vivo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 6038</td>
+                            <td>#00F700</td>
+                            <td style="background:#00F700"></td>
+                            <td>Verde luminoso</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7000</td>
+                            <td>#7E8B92</td>
+                            <td style="background:#7E8B92"></td>
+                            <td>Cinza esquilo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7001</td>
+                            <td>#8F999F</td>
+                            <td style="background:#8F999F"></td>
+                            <td>Cinza prateado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7002</td>
+                            <td>#817F68</td>
+                            <td style="background:#817F68"></td>
+                            <td>Cinza oliva</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7003</td>
+                            <td>#7A7B6D</td>
+                            <td style="background:#7A7B6D"></td>
+                            <td>Musgo acizentado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7004</td>
+                            <td>#9EA0A1</td>
+                            <td style="background:#9EA0A1"></td>
+                            <td>Cinza segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7005</td>
+                            <td>#6B716F</td>
+                            <td style="background:#6B716F"></td>
+                            <td>Cinza turvo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7006</td>
+                            <td>#756F61</td>
+                            <td style="background:#756F61"></td>
+                            <td>Cinza pêssego</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7008</td>
+                            <td>#746643</td>
+                            <td style="background:#746643"></td>
+                            <td>Cinza caqui</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7009</td>
+                            <td>#5B6259</td>
+                            <td style="background:#5B6259"></td>
+                            <td>Cinza esverdeado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7010</td>
+                            <td>#575D57</td>
+                            <td style="background:#575D57"></td>
+                            <td>Cinza encerado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7011</td>
+                            <td>#555D61</td>
+                            <td style="background:#555D61"></td>
+                            <td>Cinza ferro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7012</td>
+                            <td>#596163</td>
+                            <td style="background:#596163"></td>
+                            <td>Cinza basalto</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7013</td>
+                            <td>#555548</td>
+                            <td style="background:#555548"></td>
+                            <td>Cinza castanho</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7015</td>
+                            <td>#51565C</td>
+                            <td style="background:#51565C"></td>
+                            <td>Cinza ardósia</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7016</td>
+                            <td>#373F43</td>
+                            <td style="background:#373F43"></td>
+                            <td>Carvão</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7021</td>
+                            <td>#2E3234</td>
+                            <td style="background:#2E3234"></td>
+                            <td>Cinza escuro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7022</td>
+                            <td>#4B4D46</td>
+                            <td style="background:#4B4D46"></td>
+                            <td>Cinza assombreado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7023</td>
+                            <td>#818479</td>
+                            <td style="background:#818479"></td>
+                            <td>Concreto</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7024</td>
+                            <td>#474A50</td>
+                            <td style="background:#474A50"></td>
+                            <td>Grafite</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7026</td>
+                            <td>#374447</td>
+                            <td style="background:#374447"></td>
+                            <td>Cinza granito</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7030</td>
+                            <td>#939388</td>
+                            <td style="background:#939388"></td>
+                            <td>Cinza pedra</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7031</td>
+                            <td>#5D6970</td>
+                            <td style="background:#5D6970"></td>
+                            <td>Cinza azulado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7032</td>
+                            <td>#B9B9A8</td>
+                            <td style="background:#B9B9A8"></td>
+                            <td>Cinza seixo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7033</td>
+                            <td>#818979</td>
+                            <td style="background:#818979"></td>
+                            <td>Cinza cimento</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7034</td>
+                            <td>#939176</td>
+                            <td style="background:#939176"></td>
+                            <td>Cinza amarelado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7035</td>
+                            <td>#CBD0CC</td>
+                            <td style="background:#CBD0CC"></td>
+                            <td>Cinza claro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7036</td>
+                            <td>#9A9697</td>
+                            <td style="background:#9A9697"></td>
+                            <td>Cinza platina</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7037</td>
+                            <td>#7C7F7E</td>
+                            <td style="background:#7C7F7E"></td>
+                            <td>Cinza poeira</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7038</td>
+                            <td>#B4B8B0</td>
+                            <td style="background:#B4B8B0"></td>
+                            <td>Cinza ágata</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7039</td>
+                            <td>#6B695F</td>
+                            <td style="background:#6B695F"></td>
+                            <td>Cinza quartizo</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7040</td>
+                            <td>#9DA3A6</td>
+                            <td style="background:#9DA3A6"></td>
+                            <td>Cinza janela</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7042</td>
+                            <td>#8F9695</td>
+                            <td style="background:#8F9695"></td>
+                            <td>Cinza sinalização A</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7043</td>
+                            <td>#4E5451</td>
+                            <td style="background:#4E5451"></td>
+                            <td>Cinza sinalização B</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7044</td>
+                            <td>#BDBDB2</td>
+                            <td style="background:#BDBDB2"></td>
+                            <td>Cinza seda</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7045</td>
+                            <td>#91969A</td>
+                            <td style="background:#91969A"></td>
+                            <td>Cinza tele 1</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7046</td>
+                            <td>#82898E</td>
+                            <td style="background:#82898E"></td>
+                            <td>Cinza tele 2</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7047</td>
+                            <td>#CFD0CF</td>
+                            <td style="background:#CFD0CF"></td>
+                            <td>Cinza tele 4</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 7048</td>
+                            <td>#888175</td>
+                            <td style="background:#888175"></td>
+                            <td>Cinza turvo metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8000</td>
+                            <td>#887142</td>
+                            <td style="background:#887142"></td>
+                            <td>Marrom esverdeado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8001</td>
+                            <td>#9C6B30</td>
+                            <td style="background:#9C6B30"></td>
+                            <td>Marrom ocre</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8002</td>
+                            <td>#7B5141</td>
+                            <td style="background:#7B5141"></td>
+                            <td>Marrom segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8003</td>
+                            <td>#80542F</td>
+                            <td style="background:#80542F"></td>
+                            <td>Marrom</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8004</td>
+                            <td>#8F4E35</td>
+                            <td style="background:#8F4E35"></td>
+                            <td>Marrom cobre</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8007</td>
+                            <td>#6F4A2F</td>
+                            <td style="background:#6F4A2F"></td>
+                            <td>Marrom alce</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8008</td>
+                            <td>#6F4F28</td>
+                            <td style="background:#6F4F28"></td>
+                            <td>Marrom oliva</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8011</td>
+                            <td>#5A3A29</td>
+                            <td style="background:#5A3A29"></td>
+                            <td>Marrom castanha</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8012</td>
+                            <td>#673831</td>
+                            <td style="background:#673831"></td>
+                            <td>Marrom avermelhado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8014</td>
+                            <td>#49392D</td>
+                            <td style="background:#49392D"></td>
+                            <td>Marrom sépia</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8015</td>
+                            <td>#633A34</td>
+                            <td style="background:#633A34"></td>
+                            <td>Castanho</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8016</td>
+                            <td>#4C2F26</td>
+                            <td style="background:#4C2F26"></td>
+                            <td>Marrom mogno</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8017</td>
+                            <td>#44322D</td>
+                            <td style="background:#44322D"></td>
+                            <td>Chocolate</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8019</td>
+                            <td>#3F3A3A</td>
+                            <td style="background:#3F3A3A"></td>
+                            <td>Marrom acizentado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8022</td>
+                            <td>#211F20</td>
+                            <td style="background:#211F20"></td>
+                            <td>Marrom escuro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8023</td>
+                            <td>#A65E2F</td>
+                            <td style="background:#A65E2F"></td>
+                            <td>Marrom alaranjado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8024</td>
+                            <td>#79553C</td>
+                            <td style="background:#79553C"></td>
+                            <td>Marrom pêssego</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8025</td>
+                            <td>#755C49</td>
+                            <td style="background:#755C49"></td>
+                            <td>Marrom pálido</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8028</td>
+                            <td>#4E3B31</td>
+                            <td style="background:#4E3B31"></td>
+                            <td>Marrom terra</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 8029</td>
+                            <td>#763C28</td>
+                            <td style="background:#763C28"></td>
+                            <td>Marrom cobre metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9001</td>
+                            <td>#FDF4E3</td>
+                            <td style="background:#FDF4E3"></td>
+                            <td>Creme</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9002</td>
+                            <td>#E7EBDA</td>
+                            <td style="background:#E7EBDA"></td>
+                            <td>Branco acizentado</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9003</td>
+                            <td>#F4F4F4</td>
+                            <td style="background:#F4F4F4"></td>
+                            <td>Branco segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9004</td>
+                            <td>#282828</td>
+                            <td style="background:#282828"></td>
+                            <td>Preto segurança</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9005</td>
+                            <td>#0A0A0A</td>
+                            <td style="background:#0A0A0A"></td>
+                            <td>Preto</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9006</td>
+                            <td>#A5A5A5</td>
+                            <td style="background:#A5A5A5"></td>
+                            <td>Branco alumínio</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9007</td>
+                            <td>#8F8F8F</td>
+                            <td style="background:#8F8F8F"></td>
+                            <td>Cinza alumínio</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9010</td>
+                            <td>#FFFFFF</td>
+                            <td style="background:#FFFFFF"></td>
+                            <td>Branco puro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9011</td>
+                            <td>#1C1C1C</td>
+                            <td style="background:#1C1C1C"></td>
+                            <td>Grafite escuro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9016</td>
+                            <td>#F6F6F6</td>
+                            <td style="background:#F6F6F6"></td>
+                            <td>Branco sinalização</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9017</td>
+                            <td>#1E1E1E</td>
+                            <td style="background:#1E1E1E"></td>
+                            <td>Preto sinalização</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9018</td>
+                            <td>#D7D7D7</td>
+                            <td style="background:#D7D7D7"></td>
+                            <td>Branco papiro</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9022</td>
+                            <td>#9C9C9C</td>
+                            <td style="background:#9C9C9C"></td>
+                            <td>Cinza metálico</td>
+                        </tr>
+                        <tr>
+                            <td>RAL 9023</td>
+                            <td>#828282</td>
+                            <td style="background:#828282"></td>
+                            <td>Cinza escuro metálico</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.js" type="text/javascript"></script>
+<script src="assets/js/agape.js" type="text/javascript"></script>
+</html>
