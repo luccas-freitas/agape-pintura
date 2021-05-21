@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8"/>
-    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/img/icons/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Ágape - Pintura Eletrostática</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
@@ -10,7 +10,6 @@
 
     <link href="assets/css/bootstrap.css" rel="stylesheet"/>
     <link href="assets/css/landing-page.css" rel="stylesheet"/>
-    <!--     Fonts and icons     -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/fa-5.15.3.css" rel="stylesheet"/>
 
@@ -18,7 +17,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            // https://dashboard.emailjs.com/admin/integration
             emailjs.init('user_WxdzqpRVfgS65UOXKOya0');
         })();
     </script>
@@ -47,7 +45,6 @@
 <body class="landing-page landing-page1">
 <nav class="navbar navbar-transparent navbar-top" role="navigation">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
                 <span class="sr-only">Toggle navigation</span>
@@ -57,33 +54,31 @@
             </button>
             <div class="logo-container">
                 <div class="logo">
-                    <img src="assets/img/template/logo-small.png" alt="Creative Tim Logo">
+                    <img src="assets/img/template/logo-small.png">
                 </div>
                 <div class="brand">
-                    <a href="tel:04333295197">
-                        (43) 3329-5197
+                    <a href="tel:04333295197" class="dark_link">
+                        <b>(43) 3329-5197</b>
                     </a>
                 </div>
             </div>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="example">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" data-toggle="modal" data-target="#myModal">
+                    <a href="#" data-toggle="modal" data-target="#myModal" class="dark_link">
                         <i class="fas fa-palette"></i>
-                        Cores RAL
+                        <b>Cores RAL</b>
                     </a>
                 </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
 </nav>
 <div class="wrapper">
-    <div class="parallax filter-gradient blue" data-color="blue">
+    <div class="parallax filter-gradient orange">
         <div class="parallax-background">
-            <img class="parallax-background-image" src="assets/img/template/bg3.jpg" alt="">
+            <img class="parallax-background-image" src="assets/img/template/bg.jpg" alt="">
         </div>
         <div class="container">
             <div class="row">
@@ -94,7 +89,7 @@
                 </div>
                 <div class="col-md-6 col-md-offset-1">
                     <div class="description">
-                        <h2><b>Ágape Londrina</b></h2>
+                        <h1><b>Ágape</b></h1>
                         <h2><b>Pinturas Eletrostáticas</b></h2>
                         <h5>Trabalhamos com a melhor opção de pintura
                             para aderência em peças metálicas,
@@ -129,6 +124,9 @@
                     <li><img src="assets/img/brands/brand_9.png" alt=""/></li>
                 </ul>
             </div>
+            <div class="earth">
+                <img src="assets/img/template/earth.png" alt="" style="width: 60%"/>
+            </div>
         </div>
     </div>
     <div class="section section-demo">
@@ -138,19 +136,28 @@
                     <div id="description-carousel" class="carousel fade" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="item">
-                                <img src="assets/img/template/carousel/home_11.jpg" alt="">
+                                <img src="assets/img/template/carousel/home_01.jpg" alt="">
                             </div>
                             <div class="item active">
-                                <img src="assets/img/template/carousel/home_22.jpg" alt="">
+                                <img src="assets/img/template/carousel/home_02.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="assets/img/template/carousel/home_33.jpg" alt="">
+                                <img src="assets/img/template/carousel/home_03.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="assets/img/template/carousel/home_44.jpg" alt="">
+                                <img src="assets/img/template/carousel/home_04.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="assets/img/template/carousel/home_55.jpg" alt="">
+                                <img src="assets/img/template/carousel/home_05.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/template/carousel/home_06.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/template/carousel/home_07.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/template/carousel/home_08.jpg" alt="">
                             </div>
                         </div>
                         <ol class="carousel-indicators carousel-indicators-blue">
@@ -159,6 +166,9 @@
                             <li data-target="#description-carousel" data-slide-to="2" class=""></li>
                             <li data-target="#description-carousel" data-slide-to="3" class=""></li>
                             <li data-target="#description-carousel" data-slide-to="4" class=""></li>
+                            <li data-target="#description-carousel" data-slide-to="5" class=""></li>
+                            <li data-target="#description-carousel" data-slide-to="6" class=""></li>
+                            <li data-target="#description-carousel" data-slide-to="7" class=""></li>
                         </ol>
                     </div>
                 </div>
@@ -173,6 +183,25 @@
                     <a href="#contact"
                        style="margin-top: 50px !important;"
                        class="btn btn-fill btn-info center-block" data-button="info">Faça um Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-gray section-clients">
+        <div class="container text-center">
+            <h4 class="header-text">Conhecimento</h4>
+            <p>
+                Você sabia que a quantidade de ferro destruído anualmente
+                pela corrosão tem sido estimada em 25% a 33% da produção
+                anual dele? Enquanto você lê esta mensagem, 760Kg de ferro
+                são consumidos por corrosão. Para freiar estes números, foi
+                criada a técnica de pintura eletrostática, onde a peça fica
+                livre de corrosão e com um tempo de vida muito maior.
+                Assim, o Meio-Ambiente agradece.</br></br>
+            </p>
+            <div class="carousel-inner">
+                <div class="item active hands">
+                    <img src="assets/img/template/hands.jpg" alt="" class="hands-img">
                 </div>
             </div>
         </div>
@@ -208,10 +237,11 @@
                 <div class="col-md-4">
                     <div class="card card-blue">
                         <div class="icon">
-                            <i class="fas fa-paint-roller"></i>
+                            <img src="assets/img/icons/fas-spray-paint-gun.svg" alt="" class="spray-gun">
                         </div>
                         <h4>Pintura Poliéster</h4>
-                        <p>Possui alto poder de cobertura, secagem rápida e ótima resistência sob a ação da luz solar,
+                        <p>Possui alto poder de cobertura, secagem instantânea sob o forno a 210º. Ótima resistência sob
+                            a ação da luz solar,
                             onde a calcinação e o amarelamento são praticamente desprezíveis.</p>
                     </div>
                 </div>
@@ -574,9 +604,9 @@
         </div>
     </div>
     <div class="section section-no-padding" id="contact">
-        <div class="parallax filter-gradient blue" data-color="blue">
+        <div class="parallax filter-gradient orange">
             <div class="parallax-background">
-                <img class="parallax-background-image" src="assets/img/template/bg3.jpg" alt=""/>
+                <img class="parallax-background-image" src="assets/img/template/bg2.jpg" alt=""/>
             </div>
             <div class="info">
                 <h1>Fale Conosco</h1>
