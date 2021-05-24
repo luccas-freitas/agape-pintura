@@ -1134,7 +1134,7 @@ a:focus, a:active {
 }
 
 .landing-page .parallax .parallax-image img.phone {
-    width: 100%;
+    width: 85%;
     float: right;
 }
 
@@ -1670,11 +1670,6 @@ a:focus, a:active {
 }
 
 @media (max-width: 768px) {
-    .dark_link {
-        font-size: 21px;
-        color: rgba(255, 255, 255, 0.84) !important;
-    }
-
     .fixed-plugin {
         top: 80px;
         right: 0;
@@ -1715,10 +1710,6 @@ a:focus, a:active {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
-    }
-    .dark_link {
-        font-size: 21px;
-        color: rgba(5, 1, 1, 0.82) !important;
     }
 
     .navbar-form {
@@ -1899,6 +1890,11 @@ a:focus, a:active {
         float: none !important;
     }
 }
+@media(min-width: 1920px) {
+    .fit {
+        margin-top: -96px;
+    }
+}
 
 @media (min-width: 768px) {
     .landing-page .navbar-top {
@@ -1981,6 +1977,10 @@ a:link, a:visited, a:hover, a:active {
 
 .spray-gun {
     filter: invert(77%) sepia(55%) saturate(4323%) hue-rotate(173deg) brightness(101%) contrast(101%);
-    height: 89px;
-    margin-top: 15px;
+    height: 80px;
+    margin-top: 26px;
+}
+.dark_link {
+    font-size: 21px;
+    color: rgba(255, 255, 255, 0.97) !important;
 }
