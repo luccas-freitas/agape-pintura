@@ -1689,12 +1689,6 @@ a:focus, a:active {
         display: none !important;
     }
 }
-@media(min-width: 992px) {
-    .earth {
-        display: none !important;
-        width: 60%;
-    }
-}
 
 @media (max-width: 768px) {
     .carousel-indicators {
